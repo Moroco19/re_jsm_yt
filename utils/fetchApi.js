@@ -6,9 +6,9 @@ export const fetchApi = async (url) => {
     const { data } = await axios.get((url), {
         headers: {
             'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
-            'X-RapidAPI-Key': '7d94facb57msh76919330a0ed68ep1fb363jsn4581d372e282'
-        }
-    })
+            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY
+        },
+    });
 
     return data;
 }
